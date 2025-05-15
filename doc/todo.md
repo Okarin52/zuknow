@@ -1,0 +1,32 @@
+- [ ] プロジェクト初期化: Vite + React + TypeScript のセットアップ
+- [ ] Vite 設定ファイル作成: vite.config.ts の設定
+- [ ] ディレクトリ構成作成
+  - [ ] public/
+  - [ ] src/components/
+  - [ ] src/pages/
+  - [ ] src/hooks/
+  - [ ] src/stores/
+  - [ ] src/types/
+  - [ ] src/utils/
+  - [ ] tests/
+- [ ] 型定義作成: src/types/Question.ts
+- [ ] 永続化ユーティリティ実装: src/utils/localStorage.ts
+- [ ] ファイル入出力ユーティリティ実装: src/utils/fileOperations.ts
+- [ ] カスタムフック作成: src/hooks/useQuestions.ts
+- [ ] 状態管理ストア作成: src/stores/questionsStore.ts
+- [ ] ルートコンポーネントとルーティング実装
+  - [ ] App.tsx に React Router 設定
+  - [ ] main.tsx にエントリーポイント設定
+- [ ] 共通コンポーネント実装
+  - [ ] QuestionCard
+  - [ ] AnswerForm
+  - [ ] Navigation
+- [ ] ページコンポーネント実装
+  - [ ] Home
+  - [ ] Quiz
+  - [ ] Explanation
+  - [ ] List (CRUD + JSON インポート/エクスポート)
+  - [ ] EditQuestion
+- [ ] README.md 更新: プロジェクト概要と開発手順記載
+- [ ] テスト環境設定: Jest + React Testing Library 導入
+- [ ] テストコード作成: 各フック・コンポーネント・ストアの単体テスト
