@@ -1,15 +1,6 @@
-- [ ] プロジェクト初期化: Vite + React + TypeScript のセットアップ
-- [ ] Vite 設定ファイル作成: vite.config.ts の設定
-- [ ] ディレクトリ構成作成
-  - [ ] public/
-  - [ ] src/components/
-  - [ ] src/pages/
-  - [ ] src/hooks/
-  - [ ] src/stores/
-  - [ ] src/types/
-  - [ ] src/utils/
-  - [ ] tests/
-- [ ] 型定義作成: src/types/Question.ts
+- [x] プロジェクト初期化: Vite + React + TypeScript のセットアップ
+- [x] Vite 設定ファイル作成: vite.config.ts の設定
+- [x] 型定義作成: src/types/Question.ts
 - [ ] 永続化ユーティリティ実装: src/utils/localStorage.ts
 - [ ] ファイル入出力ユーティリティ実装: src/utils/fileOperations.ts
 - [ ] カスタムフック作成: src/hooks/useQuestions.ts
