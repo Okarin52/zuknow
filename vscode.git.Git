@@ -1,0 +1,4 @@
+git rebase -i origin/main
+
+git commit --amend --author="Okarin52 <Okarin52@users.noreply.github.com>"
+git rebase --continue
