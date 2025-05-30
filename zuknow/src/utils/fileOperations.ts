@@ -181,7 +181,7 @@ export const createQuestionFromInput = (input: QuestionInput): Question => {
  */
 const generateQuestionId = (): string => {
   const timestamp = Date.now().toString(36);
-  const randomPart = Math.random().toString(36).substr(2, 9);
+  const randomPart = Math.random().toString(36).substring(2, 11);
   return `q_${timestamp}_${randomPart}`;
 };
 
