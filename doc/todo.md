@@ -1,8 +1,8 @@
 - [x] プロジェクト初期化: Vite + React + TypeScript のセットアップ
 - [x] Vite 設定ファイル作成: vite.config.ts の設定
 - [x] 型定義作成: src/types/Question.ts
-- [ ] 永続化ユーティリティ実装: src/utils/localStorage.ts
-- [ ] ファイル入出力ユーティリティ実装: src/utils/fileOperations.ts
+- [x] 永続化ユーティリティ実装: src/utils/localStorage.ts
+- [x] ファイル入出力ユーティリティ実装: src/utils/fileOperations.ts
 - [ ] カスタムフック作成: src/hooks/useQuestions.ts
 - [ ] 状態管理ストア作成: src/stores/questionsStore.ts
 - [ ] ルートコンポーネントとルーティング実装
