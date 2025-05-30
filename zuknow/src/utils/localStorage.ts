@@ -39,6 +39,31 @@ export const saveQuestions = (questions: Question[]): void => {
  * ローカルストレージから問題を取得する
  * @returns 保存されている問題の配列
  */
+/**
+ * getQuestions関数の解説:
+ *
+ * 1. 機能:
+ * - ローカルストレージから保存された問題データを取得する関数です
+ * - STORAGE_KEYをキーとして使用してデータを取得します
+ *
+ * 2. 戻り値:
+ * - Question[]型の配列を返します
+ * - データが存在しない場合は空配列を返します
+ *
+ * 3. 処理の流れ:
+ * - localStorage.getItem()でデータを文字列として取得
+ * - データが存在しない場合は空配列を返す
+ * - JSON.parse()で文字列をオブジェクトに変換
+ * - 日付文字列をDate型に変換して返す
+ *
+ * 4. 日付の変換:
+ * - createdAtとupdatedAtはJSON化の過程で文字列になっているため
+ * - new Date()を使って正しいDate型のオブジェクトに変換
+ *
+ * 5. エラーハンドリング:
+ * - try-catchでJSON解析やストレージ操作の例外を捕捉
+ * - エラーログを出力し、エラーをスロー
+ */
 export const getQuestions = (): Question[] => {
   try {
     const questions = localStorage.getItem(STORAGE_KEY);
