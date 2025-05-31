@@ -88,27 +88,37 @@ export const useQuestions = () => {
     setState((prev: QuestionState) => ({ ...prev, loading: true, error: null }));
 
     try {
-      const existingQuestion = state.questions.find((q: Question) => q.id === id);
-      if (!existingQuestion) {
-        throw new Error('指定された問題が見つかりません');
+      let updatedQuestion: Question;
+      let error: Error | null = null;
+
+      setState((prev: QuestionState) => {
+        const existingQuestion = prev.questions.find((q: Question) => q.id === id);
+        if (!existingQuestion) {
+          error = new Error('指定された問題が見つかりません');
+          return { ...prev, loading: false, error: error.message };
+        }
+
+        updatedQuestion = {
+          ...existingQuestion,
+          ...input,
+          updatedAt: new Date()
+        };
+
+        saveQuestion(updatedQuestion);
+
+        return {
+          ...prev,
+          questions: prev.questions.map((q: Question) => q.id === id ? updatedQuestion : q),
+          currentQuestion: prev.currentQuestion?.id === id ? updatedQuestion : prev.currentQuestion,
+          loading: false
+        };
+      });
+
+      if (error) {
+        throw error;
       }
 
-      const updatedQuestion: Question = {
-        ...existingQuestion,
-        ...input,
-        updatedAt: new Date()
-      };
-
-      saveQuestion(updatedQuestion);
-
-      setState((prev: QuestionState) => ({
-        ...prev,
-        questions: prev.questions.map((q: Question) => q.id === id ? updatedQuestion : q),
-        currentQuestion: prev.currentQuestion?.id === id ? updatedQuestion : prev.currentQuestion,
-        loading: false
-      }));
-
-      return updatedQuestion;
+      return updatedQuestion!;
     } catch (error) {
       setState((prev: QuestionState) => ({
         ...prev,
@@ -117,7 +127,7 @@ export const useQuestions = () => {
       }));
       throw error;
     }
-  }, [state.questions]);
+  }, []);
 
   /**
    * 問題を削除する
