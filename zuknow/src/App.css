@@ -40,3 +40,86 @@
 .read-the-docs {
   color: #888;
 }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--gradient-dark);
+  color: var(--text-primary);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+/* Enhanced glass card styles */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  box-shadow: var(--shadow-medium);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-neon-blue), transparent);
+  opacity: 0.5;
+}
+
+.glass-card:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-neon);
+  transform: translateY(-4px);
+}
+
+/* Neon accent styles */
+.neon-text {
+  color: var(--accent-neon-blue);
+  text-shadow: 0 0 10px currentColor;
+}
+
+.neon-border {
+  border: 1px solid var(--accent-neon-blue);
+  box-shadow:
+    0 0 5px var(--accent-neon-blue),
+    inset 0 0 5px rgba(0, 212, 255, 0.1);
+}
+
+/* Loading animation for city vibe */
+@keyframes cityPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.city-pulse {
+  animation: cityPulse 2s ease-in-out infinite;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.5rem;
+  }
+}

@@ -4,20 +4,18 @@
 - [x] 永続化ユーティリティ実装: src/utils/localStorage.ts
 - [x] ファイル入出力ユーティリティ実装: src/utils/fileOperations.ts
 - [x] カスタムフック作成: src/hooks/useQuestions.ts
-- [ ] 状態管理ストア作成: src/stores/questionsStore.ts
-- [ ] ルートコンポーネントとルーティング実装
-  - [ ] App.tsx に React Router 設定
-  - [ ] main.tsx にエントリーポイント設定
-- [ ] 共通コンポーネント実装
-  - [ ] QuestionCard
-  - [ ] AnswerForm
-  - [ ] Navigation
-- [ ] ページコンポーネント実装
-  - [ ] Home
-  - [ ] Quiz
-  - [ ] Explanation
-  - [ ] List (CRUD + JSON インポート/エクスポート)
-  - [ ] EditQuestion
-- [ ] README.md 更新: プロジェクト概要と開発手順記載
-- [ ] テスト環境設定: Jest + React Testing Library 導入
-- [ ] テストコード作成: 各フック・コンポーネント・ストアの単体テスト
+- [x] 状態管理ストア作成: src/stores/questionsStore.ts
+- [x] ルートコンポーネントとルーティング実装
+  - [x] App.tsx に React Router 設定
+  - [x] main.tsx にエントリーポイント設定
+- [x] 共通コンポーネント実装
+  - [x] QuestionCard
+  - [x] AnswerForm
+  - [x] Navigation
+- [x] ページコンポーネント実装
+  - [x] Home
+  - [x] Quiz
+  - [x] Explanation
+  - [x] List (CRUD + JSON インポート/エクスポート)
+  - [x] EditQuestion
+- [x] README.md 更新: プロジェクト概要と開発手順記載
