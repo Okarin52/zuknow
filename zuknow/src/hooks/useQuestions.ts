@@ -35,7 +35,7 @@ export const useQuestions = () => {
   /**
    * ローカルストレージから問題を読み込む
    */
-    const loadQuestions = useCallback(async () => {
+  const loadQuestions = useCallback(async () => {
     setState((prev: QuestionState) => ({ ...prev, loading: true, error: null }));
 
     try {
@@ -57,7 +57,7 @@ export const useQuestions = () => {
   /**
    * 新しい問題を作成する
    */
-    const createQuestion = useCallback(async (input: QuestionInput) => {
+  const createQuestion = useCallback(async (input: QuestionInput) => {
     setState((prev: QuestionState) => ({ ...prev, loading: true, error: null }));
 
     try {
@@ -132,7 +132,7 @@ export const useQuestions = () => {
   /**
    * 問題を削除する
    */
-    const removeQuestion = useCallback(async (id: string) => {
+  const removeQuestion = useCallback(async (id: string) => {
     setState((prev: QuestionState) => ({ ...prev, loading: true, error: null }));
 
     try {
@@ -189,9 +189,9 @@ export const useQuestions = () => {
     const randomQuestion = state.questions[randomIndex];
     setCurrentQuestion(randomQuestion);
     return randomQuestion;
-  }, [state.questions, setCurrentQuestion]);
+    }, [state.questions, setCurrentQuestion]);
 
-    /**
+  /**
    * カテゴリで問題をフィルタリングする
    */
   const getQuestionsByCategory = useCallback((category: string): Question[] => {
